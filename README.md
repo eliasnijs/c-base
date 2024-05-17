@@ -9,4 +9,4 @@ Collection of basic utilities for c/c++ projects.
 4. Macros for ANSII escape charachters
 5. Some benchmark utilities
 
-Look at the files themselves for more information, they are pretty straightforward.
+Look at the files themselves for more information; they are straightforward.
