@@ -5,13 +5,13 @@
 //// NOTE(Elias): Debug Utilities
 
 #if ENABLE_ASSERT
-#define AssertBreak() (*( *)0 = 0)
+#define AssertBreak() (*(int *)0 = 0)
 #define Assert(c) Stmnt(\
-			if (!(c)){\
+			if (!(c)) {\
                           fprintf(stderr, "[ASSERTION FAILED]: %s %d, ", __FILE__, __LINE__);\
                           fprintf(stderr, "`"#c"`\n");\
                           AssertBreak();\
-			))
+			})
 #else
 #define Assert(c)
 #endif

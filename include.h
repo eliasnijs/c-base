@@ -6,6 +6,8 @@
 #include "ansii_escape_codes.h"
 #include "types.h"
 #include "helpermacros.h"
+#define ENABLE_PRINT  1
+#define ENABLE_ASSERT 1
 #include "debug.h"
 
 ////////////////////////////////////////////////////////////////////////////////
