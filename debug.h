@@ -27,8 +27,17 @@
 					fprintf(stderr, ANSI_ESC_RESET_ALL);\
 					fprintf(stderr, "\n");\
 					fflush(stderr);
+#define print_warning(format, ...)	fprintf(stderr, ANSI_ESC_RGB_BG(120, 120, 60));\
+					fprintf(stderr, format, ##__VA_ARGS__);\
+					fprintf(stderr, ANSI_ESC_RGB_FG(150, 150, 150));\
+					fprintf(stderr, " (%s %d)", __FILE__, __LINE__);\
+					fprintf(stderr, ANSI_ESC_RESET_ALL);\
+					fprintf(stderr, "\n");\
+					fflush(stderr);
 #else
 #define print(format, ...)
+#define print_error(format, ...)
+#define print_warning(format, ...)
 #endif
 
 #if ENABLE_DEBUGLOG
